@@ -30,7 +30,6 @@ public class AdvanceMathTester {
     @Test
     public void test3(){
         when(basicMath.add(20.0,20.0)).thenReturn(40.0);
-
         Assert.assertEquals(advancedMath.squareOfSum(20.0,20.0),1600.0,0);
         verify(basicMath, atLeast(2)).add(20.0,20.0);
         verify(basicMath, times(2)).add(20.0,20.0);
